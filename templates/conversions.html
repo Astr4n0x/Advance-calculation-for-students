@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number Conversions</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+    <style>
+        .center-heading { text-align: center; }
+
+    </style>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="{{ 'active' if page=='home' else '' }}">Home</a>
+            <a href="/basic_math" class="{{ 'active' if page=='basic' else '' }}">Basic Math</a>
+            <a href="/conversions" class="{{ 'active' if page=='conversions' else '' }}">Conversions</a>
+            <a href="/physics" class="{{ 'active' if page=='physics' else '' }}">Physics</a>
+            <a href="/higher_math" class="{{ 'active' if page=='higher' else '' }}">Higher Math</a>
+            <a href="/ai-chatbot" class="{{ 'active' if page=='ChatBot' else ''}}">AI ChatBot</a>
+            <a href="/about" class="{{ 'active' if page == 'about' else ''}}">About</a>
+            <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">☰</a>
+        </div>
+    </nav>
+
+    {% block content %}
+    <h1 class="center-heading" style="color: #ff4c4c;">Number Conversions</h1>
+    <div class="conversions">
+        <form method="POST">
+
+            <label for="from">From:</label>
+            <select id="from" name="from">
+                <option value="binary">Binary</option>
+                <option value="decimal">Decimal</option>
+                <option value="hexadecimal">Hexadecimal</option>
+                <option value="octal">Octal</option>
+                <option value="bcd">BCD</option>
+                <option value="ascii">ASCII</option>
+            </select>
+            
+            <label for="to">To:</label>
+            <select id="to" name="to">
+                <option value="binary">Binary</option>
+                <option value="decimal">Decimal</option>
+                <option value="hexadecimal">Hexadecimal</option>
+                <option value="octal">Octal</option>
+                <option value="bcd">BCD</option>
+                <option value="ascii">ASCII</option>
+            </select>
+            
+            <input type="text" id="inputValue" name="inputValue" placeholder="Enter Your value">
+            <button onclick="convert(event)">Convert</button>
+            
+            <div class="result" id="result">
+                {% if result %}
+                     <input type="text" value="{{ result }}" readonly>
+                {% endif %}
+            </div>
+        </form>
+            
+    </div>
+
+    <script>
+        
+        function convert(value){
+            // event.preventDefault();
+            let from = document.getElementById("from").value;
+            let to = document.getElementById("to").value;
+            let inputValue = document.getElementById("inputValue").value;
+
+            // document.getElementById("result").innerHTML = output;
+
+            // document.getElementById("result").innerHTML = `Converting "${inputValue}" from ${from} to ${to}`;
+        }
+     
+        function toggleMenu() {
+        document.getElementById("navLinks").classList.toggle("active");
+        }
+        function toggleMenu() {
+            var x = document.querySelector(".navbar");
+            if (x.className === "navbar") {
+                x.className += " responsive";
+            } else {
+                x.className = "navbar";
+            }
+        }
+    </script>
+
+    <footer>
+        <p>© 2025 Advanced Calculator Project | Built with Python & Flask | Build by Iftakher Ahammed</p>
+    </footer>
+    {% endblock %}
+</body>
+</html>

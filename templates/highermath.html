@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Physics Calculator</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+    <style>
+        .center-heading { text-align: center; }
+    </style>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="{{ 'active' if page=='home' else '' }}">Home</a>
+            <a href="/basic_math" class="{{ 'active' if page=='basic' else '' }}">Basic Math</a>
+            <a href="/conversions" class="{{ 'active' if page=='conversions' else '' }}">Conversions</a>
+            <a href="/physics" class="{{ 'active' if page=='physics' else '' }}">Physics</a>
+            <a href="/higher_math" class="{{ 'active' if page=='higher' else '' }}">Higher Math</a>
+            <a href="/ai-chatbot" class="{{ 'active' if page=='ChatBot' else ''}}">AI ChatBot</a>
+            <a href="/about" class="{{ 'active' if page == 'about' else ''}}">About</a>
+            <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">☰</a>
+        </div>
+    </nav>
+    
+    {% block content %}
+    <div class="construction">
+        <h1 class="center-heading">Higher Math Calculator</h1>
+        <p class="construction-design">This feature is currently under construction. Please check back later!</p>
+    </div>
+    <script>
+        function toggleMenu() {
+        document.getElementById("navLinks").classList.toggle("active");
+        }
+        function toggleMenu() {
+            var x = document.querySelector(".navbar");
+            if (x.className === "navbar") {
+                x.className += " responsive";
+            } else {
+                x.className = "navbar";
+            }
+        }
+    </script>
+    {% endblock %}
+</body>
+</html>

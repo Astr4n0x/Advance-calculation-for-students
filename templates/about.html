@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About - Advanced Calculator</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="{{ 'active' if page=='home' else '' }}">Home</a>
+            <a href="/basic_math" class="{{ 'active' if page=='basic' else '' }}">Basic Math</a>
+            <a href="/conversions" class="{{ 'active' if page=='conversions' else '' }}">Conversions</a>
+            <a href="/physics" class="{{ 'active' if page=='physics' else '' }}">Physics</a>
+            <a href="/higher_math" class="{{ 'active' if page=='higher' else '' }}">Higher Math</a>
+            <a href="/ai-chatbot" class="{{ 'active' if page=='ChatBot' else ''}}">AI ChatBot</a>
+            <a href="/about" class="{{ 'active' if page == 'about' else ''}}">About</a>
+            <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">☰</a>
+        </div>
+    </nav>
+
+    <section class="about-section">
+        <div class="about-container">
+            <h1>About Advanced Calculator</h1>
+            <p>Welcome to <span>Advanced Calculator</span> – your ultimate tool for fast, accurate calculations and number conversions. Designed for students, professionals, and curious minds, our platform combines simplicity with power.</p>
+
+            <div class="featuress">
+                <div class="feature-cards">
+                    <h2>⚡ Fast Calculations</h2>
+                    <p>Perform basic math operations instantly with a sleek, easy-to-use interface.</p>
+                </div>
+                <div class="feature-cards">
+                    <h2>🔢 Number Conversions</h2>
+                    <p>Convert between Binary, Decimal, Octal, Hexadecimal, BCD, and ASCII effortlessly.</p>
+                </div>
+                <div class="feature-cards">
+                    <h2>🌙 Dark Mode</h2>
+                    <p>Modern dark theme reduces eye strain and improves focus for long sessions.</p>
+                </div>
+                <div class="feature-cards">
+                    <h2>📱 Responsive Design</h2>
+                    <p>Works perfectly on desktop, tablet, and mobile devices for convenience anywhere.</p>
+                </div>
+            </div>
+
+            <div class="mission-vision">
+                <h2>Our Mission</h2>
+                <p>To empower everyone with a simple, intuitive, and accurate online calculation tool.</p>
+
+                <h2>Our Vision</h2>
+                <p>To be the go-to online calculator platform, helping students, developers, and professionals worldwide.</p>
+            </div>
+
+            <div class="tech-stack">
+                <h2>How it Works</h2>
+                <ul>
+                    <li>Input your numbers or expressions in the user-friendly interface.</li>
+                    <li>Select the desired operation or conversion type.</li>
+                    <li>Click submit to instantly see accurate results.</li>
+                    <li>Enjoy modern dark mode and responsive design for smooth usage.</li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="contact-section">
+                <h2>Contact</h2>
+                <p>Created by <strong>Iftakher Ahammed</strong>. You can reach out via social media or email for feedback and suggestions.</p>
+                <div class="social-links">
+                    <a href="https://github.com/Astr4n0x" target="_blank">GitHub</a>
+                    <!-- <a href="https://linkedin.com/in/iftakher" target="_blank">LinkedIn</a> -->
+                    <a href="mailto:the.iftakher@gmail.com">Email</a>
+                    <a href="https://www.facebook.com/iftakher.ahammed.2025">Facebook</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function toggleMenu() {
+        document.getElementById("navLinks").classList.toggle("active");
+        }
+        function toggleMenu() {
+            var x = document.querySelector(".navbar");
+            if (x.className === "navbar") {
+                x.className += " responsive";
+            } else {
+                x.className = "navbar";
+            }
+        }
+    </script>
+</body>
+</html>

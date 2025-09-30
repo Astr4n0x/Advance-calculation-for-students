@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="{{ 'active' if page=='home' else '' }}">Home</a>
+            <a href="/basic_math" class="{{ 'active' if page=='basic' else '' }}">Basic Math</a>
+            <a href="/conversions" class="{{ 'active' if page=='conversions' else '' }}">Conversions</a>
+            <a href="/physics" class="{{ 'active' if page=='physics' else '' }}">Physics</a>
+            <a href="/higher_math" class="{{ 'active' if page=='higher' else '' }}">Higher Math</a>
+            <a href="/ai-chatbot" class="{{ 'active' if page=='ChatBot' else ''}}">AI ChatBot</a>
+            <a href="/about" class="{{ 'active' if page == 'about' else ''}}">About</a>
+            <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">☰</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Advanced Calculator</h1>
+            <p>Powerful tools for Math, Conversions, Physics and Higher Calculations.</p>
+            <a href="/basic_math" class="btn-primary">Get Started</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="features">
+            <h2>Features</h2>
+            <div class="feature-cardss">
+                <div class="card">
+                    <h3>Basic Math</h3>
+                    <p>Interactive calculator for addition, subtraction, multiplication and division.</p>
+                </div>
+                <div class="card">
+                    <h3>Conversions</h3>
+                    <p>Convert numbers between Binary, Decimal, Hexadecimal, Octal, ASCII and BCD.</p>
+                </div>
+                <div class="card">
+                    <h3>Physics Solver</h3>
+                    <p>Quickly solve physics formulas and equations with accuracy.</p>
+                </div>
+                <div class="card">
+                    <h3>Higher Math</h3>
+                    <p>Work with logarithms, trigonometry, derivatives and matrices effortlessly.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="how-to-use">
+            <h2>How to Use</h2>
+            <ol>
+                <li>Choose a tool from the menu above.</li>
+                <li>Enter your values into the calculator or form.</li>
+                <li>Click "Calculate" or "Convert" to get instant results.</li>
+            </ol>
+        </section>
+
+        <section class="services">
+            <h2>Explore Tools</h2>
+            <div class="service-links">
+                <a href="/basic_math" class="btn-secondary">Basic Math</a>
+                <a href="/conversions" class="btn-secondary">Conversions</a>
+                <a href="/physics" class="btn-secondary">Physics</a>
+                <a href="/higher_math" class="btn-secondary">Higher Math</a>
+                <a href="/ai-chatbot" class="btn-secondary">AI ChatBot</a>
+                <a href="/about" class="btn-secondary">About</a>
+            </div>
+        </section>
+
+    </main>
+    <script>
+     
+        function toggleMenu() {
+        document.getElementById("navLinks").classList.toggle("active");
+        }
+        function toggleMenu() {
+            var x = document.querySelector(".navbar");
+            if (x.className === "navbar") {
+                x.className += " responsive";
+            } else {
+                x.className = "navbar";
+            }
+        }
+    </script>
+
+    <footer>
+        <p>© 2025 Advanced Calculator | Built with Python & Flask | By Iftakher Ahammed</p>
+    </footer>
+
+</body>
+</html>
