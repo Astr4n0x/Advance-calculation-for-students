@@ -11,7 +11,7 @@ It combines **Basic Math, Number Conversions, Physics Solvers and Higher Math So
 - 🔄 **Number Conversions** – Convert between Binary, Decimal, Hexadecimal, Octal, ASCII, and BCD.
 - ⚛️ **Physics Solver** – Quickly solve common physics equations and formulas.
 - 📐 **Higher Math** – Work with logarithms, trigonometry, derivatives, and matrices.
-- 🤖 **AI ChatBot (Optional)** – Interactive assistant for queries.
+- 🤖 **AI ChatBot** – Interactive assistant for queries.
 - 📱 **Responsive Design** – Works seamlessly on desktop and mobile.
 
 ---
